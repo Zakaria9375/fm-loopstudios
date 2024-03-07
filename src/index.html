@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<title>Frontend Mentor | Loopstudios landing page</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="/src/output.css">
+		<link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap"
+			rel="stylesheet">
+	</head>
+
+	<body>
+		<main id="app" class="min-h-dvh relative">
+			<section id="hero" class="h-[650px]">
+				<header class="px-6 py-10">
+					<nav class="sec-container flex justify-between items-center">
+						<img src="/images/logo.svg" alt="Company logo" class=" relative z-50">
+						<div class="z-40">
+							<Transition name="fade">
+								<div id="navigation" v-show="isOpen || windowSize.width > 768" role="navigation">
+									<ul class="desktopMenu lmd:mobileMenu text-white flex menu  z-40">
+										<li><a href="/">About</a></li>
+										<li><a href="/">Careers</a></li>
+										<li><a href="/">Events</a></li>
+										<li><a href="/">Products</a></li>
+										<li><a href="/">Support</a></li>
+									</ul>
+								</div>
+							</Transition>
+						</div>
+
+						<button @click="toggleMenu" class="reative z-50 md:hidden " :aria-expanded="isOpen.toString()"
+							aria-controls="navigation">
+							<img :src="`/images/${menuIcon}`" :alt="isOpen ? 'Close Menu' : 'Open Menu'">
+						</button>
+					</nav>
+				</header>
+
+				<div class="mt-[115px] md:mt-[70px] sec-container">
+					<h1 class="border max-w-[650px] p-6 md:p-10 mx-4 md:mx-0">Immersive experiences that deliver</h1>
+				</div>
+			</section>
+
+			<section id="description" class="px-6 max-w-[1206px] mx-auto md:px-12 my-24 md:my-40 ">
+				<div class="relative">
+					<img :src="`/images/${device}/image-interactive.jpg`" alt="a man with vr device">
+					<div class="lmd:px-6 mt-12 md:absolute z-10
+				md:pt-24 md:pl-24 md:bg-white md:right-0 md:bottom-0 md:max-w-[541px]">
+						<h2 class="mb-4 md:mb-6 ">The leader in interactive VR</h2>
+						<p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best
+							companies
+							around the globe. Our award-winning creations have transformed businesses through digital experiences that
+							bind to their
+							brand.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="creations" class="sec-container relative mb-24 md:mb-[184px]">
+				<h2 class="mb-12">our creations</h2>
+				<div>
+					<ul aria-label="Creation List" class="lmd:space-y-6 flex flex-wrap justify-center md:gap-[30px]">
+						<li v-for="create in creations" class="group lmd:px-6 relative">
+							<div class="group-hover:bg-white group-hover:opacity-75 z-10 relative cursor-pointer">
+								<img :src="`/images/${device}/${create.img}`" :alt="create.title" class="relative ">
+							</div>
+
+							<h3 class="absolute bottom-5 md:bottom-8 left-11 md:left-10 z-20 max-w-44 group-hover:text-black ">
+								<span>{{create.text1}}</span><span>{{create.text2}}</span>
+							</h3>
+						</li>
+					</ul>
+				</div>
+				<div class="zflex lmd:mt-[34px]  md:absolute right-8 top-0">
+					<button aria-label="See all creations"
+						class="capitalize text-sm tracking-[5px] leading-[14px] hover:text-white hover:bg-black border px-10 py-3">see
+						all</button>
+				</div>
+			</section>
+
+			<section id="app-footer" class=" bg-black py-14 ">
+				<div class="sec-container zflex flex-col md:justify-between md:flex-row">
+					<div aria-label="Footer navigation" class="zflex flex-col md:items-start">
+						<img src="/images/logo.svg" alt="Company logo">
+						<ul class="text-white mt-8 md:mt-6 zflex gap-4 lmd:flex-col md:gap-8">
+							<li><a href="/">About</a></li>
+							<li><a href="/">Careers</a></li>
+							<li><a href="/">Events</a></li>
+							<li><a href="/">Products</a></li>
+							<li><a href="/">Support</a></li>
+						</ul>
+					</div>
+					<div class="zflex flex-col md:items-end lmd:mt-12">
+						<div class="flex justify-center items-center space-x-4">
+							<a href="/" class="">
+								<img src="/images/icon-facebook.svg" alt="Visit our Facebook page">
+							</a>
+							<a href="/" class="">
+								<img src="/images/icon-twitter.svg" alt="Follow us on Twitter">
+							</a>
+							<a href="/" class="">
+								<img src="/images/icon-pinterest.svg" alt="Check out our Pinterest">
+							</a>
+							<a href="/" class="">
+								<img src="/images/icon-instagram.svg" alt="Follow our Instagram">
+							</a>
+						</div>
+						<h6 class="opacity-50 text-white mt-4 md:mt-8">© 2021 Loopstudios. All rights reserved.</h6>
+					</div>
+				</div>
+
+			</section>
+
+			<footer class="p-2 bg-slate-900">
+				<div class="zflex flex-wrap text-white">
+					<span class="lmd:hidden pl-1">Challenge by</span> <a href="https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw"
+						target="_blank" class="pl-2 pr-3 text-gray-400">Frontend Mentor</a>
+					Coded by <a href="https://zaportfolio.com/" target="_blank" class="pl-2 text-gray-400">Zakaria
+						Ali</a>.
+				</div>
+			</footer>
+		</main>
+		<script src="/src/main.js" type="module"></script>
+	</body>
+
+</html>

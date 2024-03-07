@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-white text-[40px] md:text-7xl font-light font-josefin uppercase leading-[38px]
+	}
+	h2 {
+		@apply lmd:text-center text-[32px] md:text-5xl font-light font-josefin uppercase leading-[1.05];
+	}
+	h3 {
+		@apply text-white text-2xl font-light font-josefin uppercase md:text-[32px] leading-[1.05];
+	}
+	h3 span {
+		@apply block;
+	}
+	p {
+		@apply opacity-50 text-center leading-[25px];
+	}
+}
+
+@layer components {
+	.sec-container {
+		@apply max-w-[1190px] mx-auto md:px-8;
+	}
+	.zflex {
+		@apply flex items-center justify-center;
+	}
+	.btn {
+		@apply h-[57px] w-[228px] rounded-full text-center;
+	}
+	.menu li {
+		@apply lmd:font-josefin lmd:font-light lmd:text-2xl lmd:uppercase leading-[25px] lmd:px-6 lmd:py-3;
+	}
+	a {
+		@apply focus:outline-2 cursor-pointer relative after:h-0.5 after:w-6 after:bg-white after:absolute after:bottom-[-8px] after:left-1/2 after:translate-x-[-50%] after:max-w-0 hover:after:max-w-6 after:transition-all after:duration-300;
+	}
+	.mobileMenu {
+		@apply absolute bg-black min-h-dvh top-0 left-0 w-full  justify-center flex-col;
+	}
+	.desktopMenu {
+		@apply justify-end gap-8;
+	}
+
+	#hero {
+		background-image: url("../images/desktop/image-hero.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	@media (max-width: 576px) {
+		#hero  {
+			background-image: url("../images/mobile/image-hero.jpg");
+		}
+	}
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 0.2s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
