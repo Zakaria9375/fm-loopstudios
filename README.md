@@ -16,7 +16,7 @@ npm install
 ## Links
 
 - [Challenge](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw)  
-- [Live](https://zakaria9375.github.io/fm-loopstudios/)
+- [Live]((https://zakaria9375.github.io/fm-loopstudios/)
 
 ## Author
 
