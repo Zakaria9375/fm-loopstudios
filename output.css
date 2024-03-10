@@ -489,7 +489,7 @@ h3 {
   line-height: 2rem;
   font-weight: 300;
   text-transform: uppercase;
-  line-height: 1.05;
+  line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -708,6 +708,17 @@ a:focus {
   background-color: rgba(0,0,0,0.4);
 }
 
+.imgCreative::after {
+  content: '';
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
 .absolute {
   position: absolute;
 }
@@ -763,8 +774,8 @@ a:focus {
   margin-bottom: 6rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-24 {
@@ -783,20 +794,12 @@ a:focus {
   margin-top: 1rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
 
 .mt-\[115px\] {
   margin-top: 115px;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .flex {
@@ -865,12 +868,13 @@ a:focus {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-2 {
   border-width: 2px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -892,19 +896,14 @@ a:focus {
   padding-right: 1.5rem;
 }
 
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pt-\[68px\] {
@@ -1015,17 +1014,16 @@ a:focus {
     margin-right: 0px;
   }
 
-  .md\:my-40 {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-
   .md\:mb-6 {
     margin-bottom: 1.5rem;
   }
 
   .md\:mb-\[184px\] {
     margin-bottom: 184px;
+  }
+
+  .md\:mt-40 {
+    margin-top: 10rem;
   }
 
   .md\:mt-6 {
@@ -1038,10 +1036,6 @@ a:focus {
 
   .md\:mt-\[126px\] {
     margin-top: 126px;
-  }
-
-  .md\:mt-40 {
-    margin-top: 10rem;
   }
 
   .md\:hidden {

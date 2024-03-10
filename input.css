@@ -10,7 +10,7 @@
 		@apply lmd:text-center text-[32px] md:text-5xl font-light font-josefin uppercase leading-none;
 	}
 	h3 {
-		@apply text-white text-2xl font-light font-josefin uppercase md:text-[32px] leading-[1.05];
+		@apply text-white text-2xl font-light font-josefin uppercase md:text-[32px] leading-none;
 	}
 	h3 span {
 		@apply block;
@@ -58,6 +58,11 @@
 	#hero::after {
 		content: '';
 		@apply absolute top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,0.4)] pointer-events-none;
+	}
+	.imgCreative::after {
+		content: '';
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+		@apply absolute top-0 left-0 bottom-0 right-0 pointer-events-none;
 	}
 }
 

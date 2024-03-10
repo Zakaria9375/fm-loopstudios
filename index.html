@@ -66,7 +66,7 @@
 					<ul aria-label="Creation List" class="lmd:space-y-6 flex flex-wrap justify-center md:gap-[30px]">
 						<li v-for="create in creations" class="group lmd:px-6 relative">
 							<div class="group-hover:bg-white group-hover:opacity-75 z-10 relative cursor-pointer">
-								<img :src="`./images/${device}/${create.img}`" :alt="`${create.text1} ${create.text2}`" class="relative ">
+								<img :src="`./images/${device}/${create.img}`" :alt="`${create.text1} ${create.text2}`" class="relative imgCreative" >
 							</div>
 
 							<h3 class="absolute bottom-5 md:bottom-8 left-11 md:left-10 z-20 max-w-44 group-hover:text-black ">
@@ -77,7 +77,7 @@
 				</div>
 				<div class="zflex lmd:mt-[34px]  md:absolute right-8 top-1">
 					<button aria-label="See all creations"
-						class="capitalize text-sm tracking-[5px] leading-[14px] hover:text-white hover:bg-black border px-10 py-3">see
+						class="capitalize text-sm tracking-[5px] leading-[14px] hover:text-white hover:bg-black border-2 border-black px-10 py-3">see
 						all</button>
 				</div>
 			</section>
