@@ -449,7 +449,7 @@ h1 {
   font-size: 40px;
   font-weight: 300;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 0.97;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -458,6 +458,7 @@ h1 {
   h1 {
     font-size: 4.5rem;
     line-height: 1;
+    line-height: 70px;
   }
 }
 
@@ -725,10 +726,6 @@ a:focus {
 
 .right-8 {
   right: 2rem;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .top-1 {
@@ -1030,8 +1027,8 @@ a:focus {
     margin-top: 2rem;
   }
 
-  .md\:mt-\[70px\] {
-    margin-top: 70px;
+  .md\:mt-\[126px\] {
+    margin-top: 126px;
   }
 
   .md\:hidden {

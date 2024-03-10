@@ -4,7 +4,7 @@
 
 @layer base {
 	h1 {
-		@apply text-white text-[40px] md:text-7xl font-light font-josefin uppercase leading-none;
+		@apply text-white text-[40px] md:text-7xl font-light font-josefin uppercase leading-[0.97] md:leading-[70px];
 	}
 	h2 {
 		@apply lmd:text-center text-[32px] md:text-5xl font-light font-josefin uppercase leading-none;
