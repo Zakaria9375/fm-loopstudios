@@ -40,7 +40,7 @@
 					</nav>
 				</header>
 
-				<div class="mt-[115px] md:mt-[70px] sec-container">
+				<div class="mt-[115px] md:mt-[70px] sec-container relative z-10">
 					<h1 class="border-2 max-w-[650px] p-6 md:p-10 mx-4 md:mx-0">Immersive experiences that deliver</h1>
 				</div>
 			</section>
@@ -51,7 +51,7 @@
 					<div class="lmd:px-6 mt-12 md:absolute z-10
 				md:pt-24 md:pl-24 md:bg-white md:right-0 md:bottom-0 md:max-w-[541px]">
 						<h2 class="mb-4 md:mb-6 ">The leader in interactive VR</h2>
-						<p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best
+						<p class="text-left">Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best
 							companies
 							around the globe. Our award-winning creations have transformed businesses through digital experiences that
 							bind to their
@@ -66,7 +66,7 @@
 					<ul aria-label="Creation List" class="lmd:space-y-6 flex flex-wrap justify-center md:gap-[30px]">
 						<li v-for="create in creations" class="group lmd:px-6 relative">
 							<div class="group-hover:bg-white group-hover:opacity-75 z-10 relative cursor-pointer">
-								<img :src="`./images/${device}/${create.img}`" :alt="create.title" class="relative ">
+								<img :src="`./images/${device}/${create.img}`" :alt="`${create.text1} ${create.text2}`" class="relative ">
 							</div>
 
 							<h3 class="absolute bottom-5 md:bottom-8 left-11 md:left-10 z-20 max-w-44 group-hover:text-black ">
@@ -75,7 +75,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="zflex lmd:mt-[34px]  md:absolute right-8 top-0">
+				<div class="zflex lmd:mt-[34px]  md:absolute right-8 top-1">
 					<button aria-label="See all creations"
 						class="capitalize text-sm tracking-[5px] leading-[14px] hover:text-white hover:bg-black border px-10 py-3">see
 						all</button>
@@ -109,7 +109,7 @@
 								<img src="./images/icon-instagram.svg" alt="Follow our Instagram">
 							</a>
 						</div>
-						<h6 class="opacity-50 text-white mt-4 md:mt-8">© 2021 Loopstudios. All rights reserved.</h6>
+						<h4 class="opacity-50 text-white mt-4 md:mt-8">© 2021 Loopstudios. All rights reserved.</h4>
 					</div>
 				</div>
 
