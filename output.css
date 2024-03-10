@@ -795,6 +795,10 @@ a:focus {
   margin-top: 115px;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -896,6 +900,11 @@ a:focus {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pt-\[68px\] {
@@ -1029,6 +1038,10 @@ a:focus {
 
   .md\:mt-\[126px\] {
     margin-top: 126px;
+  }
+
+  .md\:mt-40 {
+    margin-top: 10rem;
   }
 
   .md\:hidden {
