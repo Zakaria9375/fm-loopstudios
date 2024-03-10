@@ -4,10 +4,10 @@
 
 @layer base {
 	h1 {
-		@apply text-white text-[40px] md:text-7xl font-light font-josefin uppercase leading-[38px]
+		@apply text-white text-[40px] md:text-7xl font-light font-josefin uppercase leading-none;
 	}
 	h2 {
-		@apply lmd:text-center text-[32px] md:text-5xl font-light font-josefin uppercase leading-[1.05];
+		@apply lmd:text-center text-[32px] md:text-5xl font-light font-josefin uppercase leading-none;
 	}
 	h3 {
 		@apply text-white text-2xl font-light font-josefin uppercase md:text-[32px] leading-[1.05];
@@ -16,7 +16,7 @@
 		@apply block;
 	}
 	p {
-		@apply opacity-50 text-center leading-[25px];
+		@apply opacity-50 text-center text-base leading-[25px];
 	}
 }
 
